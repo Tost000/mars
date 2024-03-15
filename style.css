@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Comfortaa:wght@300..700&family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 body {
-  background-color: #554d4d;
+  background-color: #644d4d;
   background-image: url(mars.png), url(stars.png);
   background-repeat: no-repeat, repeat;
   background-position: 0px 299px;
-  background-size: 727px 781px;
+  background-size: 363px 781px;
 }
 * {
   font-family: "Montserrat", sans-serif;
@@ -14,8 +14,8 @@ article {
   position: absolute;
   width: 783px;
   height: 196px;
-  top: 639px;
-  left: 325px;
+  top: 320px;
+  left: 650px;
 }
 nav {
   display: flex;
@@ -32,7 +32,8 @@ a {
   text-decoration: none;
 }
 #mars_title {
-  scale: 2;
+  font-size: 36px; /* Размер текста */
+  font-weight: bold; /* Жирный шрифт */
   text-decoration: solid;
 }
 #btn {
