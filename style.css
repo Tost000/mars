@@ -52,3 +52,56 @@ a {
   align-items: center;
   border-radius: 10px;
 }
+#btn:hover {
+  background-color: #d8936c;
+}
+.nav_link:hover {
+  color: #de8559;
+}
+form {
+  margin: 404px 0px 0px 499px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  width: 587.5px;
+  height: 783px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-title {
+  font-size: 24px; /* Размер текста */
+  font-weight: 600; /* Жирный шрифт */
+  text-align: center;
+  margin-top: 20px;
+  width: 370px;
+  height: 70px;
+}
+input {
+  outline: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  width: 245px;
+  height: 30px;
+}
+input:focus {
+  border: #de8559 3px solid;
+}
+.travel {
+  color: #de8559;
+}
+.btn_submit {
+  display: flex;
+  background-color: #de8559;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.form_name {
+  width: 370px;
+  height: 92.5px;
+}
