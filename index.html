@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mars</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -74,6 +78,40 @@
       </div>
       <a href="" class="btn_submit_tarif">Выбрать дату</a>
     </main>
+    <section class="photogalery">
+      <h2 class="block_title">Фотогалерея</h2>
+      <div class="mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img_sourses/photo1.png" alt="фото марса" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img_sourses/photo2.png" alt="фото марса" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img_sourses/photo3.png" alt="фото марса" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img_sourses/photo4.png" alt="фото марса" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img_sourses/photo5.png" alt="фото марса" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img_sourses/photo6.png" alt="фото марса" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
     <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
   </body>
 </html>
