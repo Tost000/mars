@@ -32,9 +32,9 @@
         <h2 class="form-title">
           Выбери дату и Забронирой <b class="travel">путешествие</b>
         </h2>
-        <input type="date" placeholder="Дата" />
-        <input type="text" placeholder="Имя" />
-        <input type="tel" placeholder="Телефон" />
+        <input class="input_time" type="date" placeholder="Дата" />
+        <input class="input_time" type="text" placeholder="Имя" />
+        <input class="input_time" type="tel" placeholder="Телефон" />
         <a href="" class="btn_submit">Найти тур</a>
       </form>
     </header>
@@ -78,7 +78,7 @@
       </div>
       <a href="" class="btn_submit_tarif">Выбрать дату</a>
     </main>
-    <section class="photogalery">
+    <!-- <section class="photogalery">
       <h2 class="block_title">Фотогалерея</h2>
       <div class="mySwiper">
         <div class="swiper-wrapper">
@@ -103,8 +103,18 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-    </section>
-    <footer></footer>
+    </section> -->
+    <footer>
+      <form class="ask_form">
+        <h2 class="footer-form-title">Остались вопросы?</h2>
+        <h3 class="footer_form_title_2">
+          Напиши нам и мы сможем подобрать оптимальные условия поездки
+        </h3>
+        <input class="input_ask" type="text" placeholder="Имя" />
+        <input class="input_ask" type="tel" placeholder="Телефон" />
+        <a href="" class="btn_submit_ask">Найти тур</a>
+      </form>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
