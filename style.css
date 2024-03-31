@@ -6,6 +6,7 @@ body {
   background-position: 0px 299px;
   background-size: 363px 781px;
   margin: 0px;
+  overflow-x: hidden;
 }
 * {
   font-family: "Montserrat", sans-serif;
@@ -175,41 +176,13 @@ main {
   justify-content: space-evenly;
   column-gap: 100px;
 }
-/* .photogalery {
-  position: relative;
-  min-height: 100vh;
-}
-.block_title {
-  font-weight: 600;
-  font-size: 60px;
-  color: #ffffff;
-  margin-bottom: 100px;
-}
-.photogalery {
-  max-width: 200px;
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+
 footer {
-  height: 738.67px;
   bottom: 0;
-  background-image: url(img_sourses/Background-image.png);
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  background-size: 1280px 738.67px;
+  width: 100vw;
+  position: relative;
 }
 .ask_form {
   display: flex;
@@ -259,4 +232,65 @@ footer {
 .btn_submit_ask,
 .input_ask {
   margin-top: 20px;
+}
+input {
+  color: black;
+}
+.swiper {
+  width: 800px;
+  height: 260px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+}
+.photogalery_wraper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 800px;
+}
+.photogalery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 333px;
+}
+.video {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  left: 0px;
+  top: 0px;
+  z-index: -2;
+}
+.video-block::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+.photogalery-title {
+  font-family: Montserrat;
+  font-size: 33.33px;
+  font-weight: 700;
+  line-height: 60.95px;
+  text-align: left;
+  margin-bottom: 50px;
 }

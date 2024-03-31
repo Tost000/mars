@@ -9,17 +9,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
-  <body>
+  <body class="animate__animated animate__backInDown">
     <header>
       <nav>
         <a href="#" id="mars_title">MARS</a>
         <ul>
-          <li><a href="#" class="nav_link">Тариф</a></li>
-          <li><a href="#" class="nav_link">Фотогалерея</a></li>
-          <li><a href="#" class="nav_link">Задать вопрос</a></li>
+          <li><a href="#tarif" class="nav_link">Тариф</a></li>
+          <li><a href="#photogalery" class="nav_link">Фотогалерея</a></li>
+          <li><a href="#ask" class="nav_link">Задать вопрос</a></li>
         </ul>
-        <a href="#" id="btn">Забронировать</a>
+        <a href="#date" id="btn">Забронировать</a>
       </nav>
       <article>
         <h1 id="Mars_good">На <span class="span">Марсе</span> класно</h1>
@@ -29,17 +33,17 @@
         </h2>
       </article>
       <form class="date_form">
-        <h2 class="form-title">
+        <h2 id="date" class="form-title">
           Выбери дату и Забронирой <b class="travel">путешествие</b>
         </h2>
         <input class="input_time" type="date" placeholder="Дата" />
         <input class="input_time" type="text" placeholder="Имя" />
         <input class="input_time" type="tel" placeholder="Телефон" />
-        <a href="" class="btn_submit">Найти тур</a>
+        <a href="#" class="btn_submit">Найти тур</a>
       </form>
     </header>
     <main>
-      <h3 class="tarif_title">Тарифы</h3>
+      <h3 id="tarif" class="tarif_title">Тарифы</h3>
       <div class="tarif_block">
         <div class="tarif_eco">
           <h3 class="eco_1">Эконом</h3>
@@ -76,35 +80,40 @@
           <img class="half-circle" src="half-circle 1.png" alt="half-circle" />
         </div>
       </div>
-      <a href="" class="btn_submit_tarif">Выбрать дату</a>
+      <a href="#" class="btn_submit_tarif">Выбрать дату</a>
     </main>
-    <!-- <section class="photogalery">
-      <h2 class="block_title">Фотогалерея</h2>
-      <div class="mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="img_sourses/photo1.png" alt="фото марса" />
+    <section id="photogalery" class="photogalery">
+      <div class="photogalery_wraper">
+        <h2 class="photogalery_title">Фотогалерея</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img_sourses/photo1.png" alt="mars_photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img_sourses/photo2.png" alt="mars_photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img_sourses/photo3.png" alt="mars_photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img_sourses/photo4.png" alt="mars_photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img_sourses/photo5.png" alt="mars_photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img_sourses/photo6.png" alt="mars_photo" />
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="img_sourses/photo2.png" alt="фото марса" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img_sourses/photo3.png" alt="фото марса" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img_sourses/photo4.png" alt="фото марса" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img_sourses/photo5.png" alt="фото марса" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img_sourses/photo6.png" alt="фото марса" />
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
-    </section> -->
-    <footer>
+    </section>
+    <footer id="ask">
+      <div class="video-block">
+        <video src="racket.mp4" class="video" autoplay muted loop></video>
+      </div>
       <form class="ask_form">
         <h2 class="footer-form-title">Остались вопросы?</h2>
         <h3 class="footer_form_title_2">
@@ -112,15 +121,50 @@
         </h3>
         <input class="input_ask" type="text" placeholder="Имя" />
         <input class="input_ask" type="tel" placeholder="Телефон" />
-        <a href="" class="btn_submit_ask">Найти тур</a>
+        <a href="#" class="btn_submit_ask">Найти тур</a>
       </form>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
         pagination: {
           el: ".swiper-pagination",
+          clickable: true,
         },
+      });
+      // JavaScript для плавной прокрутки к якорным ссылкам
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+      // Добавление анимации для всех тегов <input>
+      document.querySelectorAll("input").forEach((input) => {
+        input.addEventListener("focus", function () {
+          this.classList.add("animate__animated", "animate__tada");
+        });
+
+        input.addEventListener("blur", function () {
+          this.classList.remove("animate__animated", "animate__tada");
+        });
+      });
+      // Добавление анимации для всех тегов <a>
+      document.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("focus", function () {
+          this.classList.add("animate__animated", "animate__rubberBand");
+        });
+
+        a.addEventListener("blur", function () {
+          this.classList.remove("animate__animated", "animate__rubberBand");
+        });
       });
     </script>
   </body>
